@@ -85,7 +85,17 @@
 
 3. 终端下运行 `bash run.sh`,至此，BERT模型已经成功运行起来了
 
-4. （可选）在终端下运行`bash runadam.sh`以运行增加了Adam优化器的BERT模型
+4. （可选）在终端下运行`bash runadam.sh`以运行增加了Adam优化器的BERT模型（需要修改run_classifier中如下内容)
+
+```python
+import modeling_adam as modeling
+import optimization_adam as optimization
+# import modeling 注释如下两行，引入adam模型
+# import optimization
+```
+
+
+
 
 ## FAQ
 
