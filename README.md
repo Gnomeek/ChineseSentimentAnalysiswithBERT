@@ -16,6 +16,7 @@
 1. [下载](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)BERT中文模型，并解压在该目录下
 
 2. 将你的数据集文件放到data文件夹下，并重命名为"data.csv"。完成这两步后你的项目文件树应该如下：
+
   ├── CONTRIBUTING.md
 
   ├── LICENSE
