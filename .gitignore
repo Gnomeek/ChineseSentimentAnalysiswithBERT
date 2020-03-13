@@ -115,7 +115,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-data/
+.csv
 chinese_L-12_H-768_A-12/
 adam_output/
 __init__.py
