@@ -122,4 +122,11 @@ System       | Seq Length | Max Batch Size
 ...          | 384        | 0
 ...          | 512        | 0
 
+#### Q: 如何使用数据集训练自己的句向量
+
+A: 参考[Bert-a s-service](https://github.com/hanxiao/bert-as-service)
+
+#### Q: 如何将模型部署到服务器上
+
+A: 参考[Bert-base](https://github.com/macanv/BERT-BiLSTM-CRF-NER)
 
