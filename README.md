@@ -16,72 +16,51 @@
 1. [下载](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)BERT中文模型，并解压在该目录下
 
 2. 将你的数据集文件放到data文件夹下，并重命名为"data.csv"。完成这两步后你的项目文件树应该如下：
-
-  ├── CONTRIBUTING.md
-
-  ├── LICENSE
-
-  ├── README.md
-
-  ├── chinese_L-12_H-768_A-12
-
-  │   ├── bert_config.json
-
-  │   ├── bert_model.ckpt.data-00000-of-00001
-
-  │   ├── bert_model.ckpt.index
-
-  │   ├── bert_model.ckpt.meta
-
-  │   └── vocab.txt
-
-  ├── create_pretraining_data.py
-
-  ├── data
-
-  │   └── data.csv
-
-  ├── divide.py
-
-  ├── extract_features.py
-
-  ├── freeze_graph.py
-
-  ├── freezegraph.sh
-
-  ├── modeling.py
-
-  ├── modeling_adam.py
-
-  ├── modeling_test.py
-
-  ├── multilingual.md
-
-  ├── optimization.py
-
-  ├── optimization_adam.py
-
-  ├── optimization_test.py
-
-  ├── requirements.txt
-
-  ├── run.sh
-
-  ├── run_classifier.py
-
-  ├── run_classifier_with_tfhub.py
-
-  ├── run_pretraining.py
-
-  ├── run_squad.py
-
-  ├── runadam.sh
-
-  ├── sample_text.txt
-
-  ├── tokenization.py
-
-  └── tokenization_test.py
+```
+.
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── __init__.py
+├── adam_output
+├── chinese_L-12_H-768_A-12
+│   ├── bert_config.json
+│   ├── bert_model.ckpt.data-00000-of-00001
+│   ├── bert_model.ckpt.index
+│   ├── bert_model.ckpt.meta
+│   └── vocab.txt
+├── create_pretraining_data.py
+├── data
+│   ├── adam_output
+│   ├── dev.csv
+│   ├── ouput
+│   ├── test.csv
+│   ├── train.csv
+│   └── data.csv
+├── divide.py
+├── extract_features.py
+├── freeze_graph.py
+├── freezegraph.sh
+├── modeling.py
+├── modeling_adam.py
+├── modeling_test.py
+├── multilingual.md
+├── optimization.py
+├── optimization_adam.py
+├── optimization_test.py
+├── requirements.txt
+├── run.sh
+├── run_classifier.py
+├── run_classifier_with_tfhub.py
+├── run_pretraining.py
+├── run_squad.py
+├── runadam.sh
+├── sample_text.txt
+├── svr
+│   └── bertsvr.sh
+├── tokenization.py
+└── tokenization_test.py
+```
 
 3. 终端下运行 `bash run.sh`,至此，BERT模型已经成功运行起来了
 
@@ -94,6 +73,19 @@ import optimization_adam as optimization
 # import optimization
 ```
 
+5. 潜在问题：在执行`python divide.py`时可能会出现错误，建议手动使用该文件分割数据集，并删除每个子数据集首行自动生成的表头（形如label x_train）
+
+6. 运行此项目需要如下环境
+
+```
+tensorflow >= 1.11.0
+bert-base
+flask 
+flask_compress
+flask_cors
+flask_cors
+pickle-mixin
+```
 
 
 
@@ -140,3 +132,5 @@ A: 参考[Bert-a s-service](https://github.com/hanxiao/bert-as-service)
 
 A: 参考[Bert-base](https://github.com/macanv/BERT-BiLSTM-CRF-NER)
 
+#### Q: Bert-base 服务无法正常运行
+A: 由于部分操作系统下pip安装方式的不同，可能环境变量并未配置完善，需要手动将Bert-base路径添加至环境变量中（export路径或者修改.bashrc等类似文件均可）
