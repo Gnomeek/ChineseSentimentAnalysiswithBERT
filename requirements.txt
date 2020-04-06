@@ -1,2 +1,8 @@
 tensorflow >= 1.11.0   # CPU Version of TensorFlow.
+bert-base
+flask 
+flask_compress
+flask_cors
+flask_cors
+pickle-mixin
 # tensorflow-gpu  >= 1.11.0  # GPU version of TensorFlow.

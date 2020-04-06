@@ -1,4 +1,4 @@
-export TRAINED_CLASSIFIER=data/adam_output
+export TRAINED_CLASSIFIER=data/output
 export BERT_BASE_DIR=chinese_L-12_H-768_A-12
 
 python freeze_graph.py \

@@ -21,6 +21,7 @@ from __future__ import print_function
 import collections
 import csv
 import os
+import pickle
 # import modeling_adam as modeling
 # import optimization_adam as optimization
 import modeling
