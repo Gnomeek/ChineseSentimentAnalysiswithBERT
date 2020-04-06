@@ -22,7 +22,6 @@
 ├── LICENSE
 ├── README.md
 ├── __init__.py
-├── adam_output
 ├── chinese_L-12_H-768_A-12
 │   ├── bert_config.json
 │   ├── bert_model.ckpt.data-00000-of-00001
