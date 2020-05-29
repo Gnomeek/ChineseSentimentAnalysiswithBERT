@@ -82,7 +82,7 @@ bert-base
 flask 
 flask_compress
 flask_cors
-flask_cors
+flask_json
 pickle-mixin
 ```
 
