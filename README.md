@@ -96,7 +96,7 @@ A: 理论上来说，修改run_classifier.py文件中`MyProcessor`类的`get_lab
 
 #### Q: 训练需要多长时间？
 
-A: 我的机器为MistGPU提供的Titan V(12G)，数据集大小约为12万条。执行BERT耗时35分钟左右，使用Adam优化器后缩短至17分钟左右。你可以点击[链接](mistgpu.com/i/747128)来注册MistGPU，你和我均会获得8¥代金券，或者可以点击[链接](mistgpu.com)来注册，只有你会获得8¥代金券（一切解释权归属MistGPU）。下表为MistGPU部分收费参考表（可能日后会有变动）：
+A: 我的机器为MistGPU提供的Titan V(12G)，数据集大小约为12万条。执行BERT耗时35分钟左右，使用Adam优化器后缩短至17分钟左右。你可以点击[链接](https://mistgpu.com/i/747128)来注册MistGPU，你和我均会获得8¥代金券，或者可以点击[链接](https://mistgpu.com)来注册，只有你会获得8¥代金券（一切解释权归属MistGPU）。下表为MistGPU部分收费参考表（可能日后会有变动）：
 
 | 机器             | 收费   |
 | ---------------- | ------ |
